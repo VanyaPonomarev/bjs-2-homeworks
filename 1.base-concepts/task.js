@@ -10,9 +10,6 @@ function solveEquation(a, b, c) {
   else if (d == 0) {
     arr[0] = -b / (2 * a);
   }
-  else if (d < 0) {
-    arr;
-  }
   return arr; // array
 }
 
@@ -28,7 +25,7 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   let month = new Date().getMonth();
   let year = new Date().getFullYear();
   let numberOfyears = date.getFullYear() - year;
-  let n = numberOFyears * 12 - month + date.getMonth();
+  let n = numberOfyears * 12 - month + date.getMonth();
   let P = (percent / 100) / 12;
   let S = amount - contribution;
   let payment = S * (P + (P / (((1 + P) ** n) - 1)))
